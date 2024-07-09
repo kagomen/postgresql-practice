@@ -36,7 +36,22 @@ postgres=# CREATE DATABASE test;
 # データーベース一覧を表示する
 postgres=# \l
 # データーベースを切り替える
-postgres=# \c test
+postgres=# \c users
+```
+
+```
+users=# CREATE TABLE users (
+users(# ID serial primary key,
+users(# name varchar(255),
+users(# email varchar(255);
+
+users=# \dt
+```
+
+```
+users=# INSERT INTO users (name, email)
+users=# VALUES ('kagome', 'mail@example.com'), ('urico', 'mail@example.com');
+users=# SELECT * FROM users;
 ```
 
 ## 参考
